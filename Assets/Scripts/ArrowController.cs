@@ -40,7 +40,7 @@ public class ArrowController : MonoBehaviour {
 	// idousuru
 	private void idou(){
 		//transform.position += transform.forward * speed_idou * time;
-		transform.position += transform.up * speed_idou;
+		transform.position += transform.forward * speed_idou;
 	}
 
 	// rotate
@@ -51,12 +51,12 @@ public class ArrowController : MonoBehaviour {
 		
 		if (local == true)
 		{
-			transform.Rotate(new Vector3( 0, 0, sz) * Time.deltaTime * -1);
+			transform.Rotate(new Vector3( 0, sz, 0) * Time.deltaTime * -1);
 		}
 		
 		if (local == false)
 		{
-			transform.Rotate(new Vector3( 0, 0, sz) * Time.deltaTime * -1, Space.World);
+			transform.Rotate(new Vector3( 0, sz, 0) * Time.deltaTime * -1, Space.World);
 		}
 	}
 }
